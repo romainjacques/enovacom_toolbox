@@ -23,3 +23,11 @@
   content: "|";
   padding-right: 0.3em;
 }
+.exp_center {
+  text-align: center;
+}
+.header_logo {
+  float: left;
+  width: 80px;
+  height: 80px;
+}

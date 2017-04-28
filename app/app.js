@@ -5,10 +5,26 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.view1',
   'myApp.view2',
-  'myApp.version'
-]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
-
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+  'myApp.version',
+  'b2',
+  'home'
+])
+.config(['$routeProvider','$locationProvider',
+    function($routeProvider,$locationProvider) {
+    $locationProvider.hashPrefix('!');
+    $routeProvider
+        .when('/home', {
+        templateUrl: '/features/home/home.html',
+        currentNavItem:'home',
+        controller: 'homeCtrl'
+    }).when('/b2', {
+        templateUrl: '/features/b2/b2.html',
+        currentNavItem: 'b2',
+        controller: 'b2Ctrl'
+    }).otherwise({
+        redirectTo: '/home'
+    })
+}])
+.controller('myAppCtrl', function ($scope) {
+        $scope.currentNavItem="home";
+    })
