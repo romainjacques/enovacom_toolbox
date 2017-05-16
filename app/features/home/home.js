@@ -3,6 +3,8 @@
 angular.module('home', ['ngRoute','ngMaterial','myApp'])
 
 
-    .controller('homeCtrl', [function() {
+    .controller('homeCtrl', ['myAppService',function(myAppService) {
+      myAppService.navItem='home';
+      return myAppService.navItem;
 
     }]);

@@ -1,7 +1,65 @@
-<div ng-controller="b2Ctrl as b2" ng-cloak>
-    <md-content class="md-padding" layout-xs="column" layout="row" layout-wrap>
+<div ng-controller="b2Ctrl" ng-cloak>
+  <md-content class="md-padding" layout-xs="column" layout="row" layout-wrap>
         <div class="exp_center">
             <h2>Traitement des fichiers B2</h2>
         </div>
-    </md-content>
+  </md-content>
+  <md-content class="md-padding" layout-xs="column" layout="row" layout-wrap>
+    <div flex-xs flex-gt-xs="40" layout="column">
+      <md-content class="md-padding" layout-xs="column" layout="row" layout-wrap>
+        <md-imput-container >
+          <textarea placeholder="Copier le contenu de votre fichier B2 ici" rows="15" max-rows="25" cols="70" ng-model="b2Input" ng-change="change()" id="b2TextInput"></textarea>
+        </md-input-container>
+      </md-content>
+    </div>
+    <div flex-xs flex-gt-xs="60" layout="column">
+      <md-content class="md-padding" layout-xs="column" layout="row" layout-wrap>
+        <div flex-xs flex-gt-xs="45" layout="column" layout="column" ng-if="fileInfo.checked==null">
+          <md-toolbar>
+            <div class="md-toolbar-tools">
+              <h2 class="md-flex exp_center"><i class="fa fa-info-circle" aria-hidden="true"></i> Informations Fichier</h2>
+            </div>
+          </md-toolbar>
+          <md-list>
+            <md-list-item>En attente fichier</md-list-item>
+          </md-list>
+        </div>
+        <div flex-xs flex-gt-xs="45" layout="column" layout="column" ng-if="fileInfo.checked==true">
+          <md-toolbar>
+            <div class="md-toolbar-tools">
+              <h2 class="md-flex exp_center"><i class="fa fa-info-circle" aria-hidden="true"></i> Informations Fichier</h2>
+            </div>
+          </md-toolbar>
+          <md-list>
+            <md-list-item>Organisme destinataire : {{fileInfo.orgaDest}}</md-list-item>
+            <md-list-item>Numérot de lot : {{fileInfo.numLot}}</md-list-item>
+            <md-list-item>Libellé : {{fileInfo.libelle}}</md-list-item>
+          </md-list>
+        </div>
+        <div flex-xs flex-gt-xs="45" layout="column" layout="column" ng-if="fileInfo.checked==false">
+          <md-toolbar class="md-warn">
+            <div class="md-toolbar-tools">
+              <h2 class="md-flex exp_center"><i class="fa fa-info-circle" aria-hidden="true"></i> Informations Fichier</h2>
+            </div>
+          </md-toolbar>
+          <md-list>
+            <md-list-item>Organisme destinataire : {{fileInfo.orgaDest}}</md-list-item>
+            <md-list-item>L'organisme destinataire n'existe pas</md-list-item>
+
+          </md-list>
+        </div>
+        <div flex-xs flex-gt-xs="45" flex-offset="10"layout="column" layout="column">
+          <md-toolbar class="exp_center">
+            <div class="md-toolbar-tools ">
+              <h2 class="md-flex"><i class="fa fa-line-chart" aria-hidden="true"></i> Analyse du Fichier</h2>
+            </div>
+          </md-toolbar>
+          <md-content flex layout-padding>
+            <p>Lorem ipsum dolor sit amet, ne quod novum mei. Sea omnium invenire mediocrem at, in lobortis conclusionemque nam. Ne deleniti appetere reprimique pro, inani labitur disputationi te sed. At vix sale omnesque, id pro labitur reformidans accommodare, cum labores honestatis eu. Nec quem lucilius in, eam praesent reformidans no. Sed laudem aliquam ne.</p>
+            <p>Facete delenit argumentum cum at. Pro rebum nostrum contentiones ad. Mel exerci tritani maiorum at, mea te audire phaedrum, mel et nibh aliquam. Malis causae equidem vel eu. Noster melius vis ea, duis alterum oporteat ea sea. Per cu vide munere fierent.</p>
+          </md-content>
+        </div>
+      </md-content>
+    </div>
+  </md-content>
 </div>

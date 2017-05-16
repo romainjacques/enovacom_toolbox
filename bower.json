@@ -18,6 +18,7 @@
     "angular-translate-loader-static-files": "^2.15.1",
     "flexbox": "*",
     "font-awesome": "^4.7.0",
-    "angular-cookies": "^1.6.4"
+    "angular-cookies": "^1.6.4",
+    "angular-ui-router": "ui-router#^1.0.1"
   }
 }
