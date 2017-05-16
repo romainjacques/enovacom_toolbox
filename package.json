@@ -1,10 +1,10 @@
 {
-  "name": "angular-seed",
+  "name": "enovacom-toolbox",
   "private": true,
   "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
-  "license": "MIT",
+  "description": "enovacom-toolbox",
+  "repository": "https://github.com/romainjacques/enovacom_toolbox",
+  "license": "enovacom",
   "devDependencies": {
     "bower": "^1.7.7",
     "http-server": "^0.10.0",

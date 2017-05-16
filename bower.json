@@ -3,7 +3,7 @@
   "description": "Support ToolBox for Enovacom",
   "version": "0.0.0",
   "homepage": "",
-  "license": "MIT",
+  "license": "enovacom",
   "private": true,
   "dependencies": {
     "angular": "^1.6.4",
